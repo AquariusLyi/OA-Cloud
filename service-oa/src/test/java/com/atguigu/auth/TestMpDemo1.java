@@ -5,15 +5,19 @@ import com.atguigu.model.system.SysRole;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.core.enums.SqlMethod;
+import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
+import com.baomidou.mybatisplus.core.toolkit.Constants;
 import com.google.common.base.Function;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @SpringBootTest
 public class TestMpDemo1 {
@@ -99,7 +103,40 @@ public class TestMpDemo1 {
         LambdaQueryWrapper<SysRole> wrapper = new LambdaQueryWrapper<>();
         wrapper.in(SysRole::getRoleCode,roleCode);
         //调用mp方法实现查询操作
-        List<SysRole> sysRoles = mapper.selectList(wrapper);
-        System.out.println(sysRoles);
+       // List<SysRole> sysRoles = mapper.selectList(wrapper);
+        // 方法二 lameda表达式
+        List<SysRole> sysRoles2 = mapper.selectList(new QueryWrapper<SysRole>()
+                .lambda()
+                .in(SysRole::getRoleCode, roleCode));
+        System.out.println(sysRoles2);
     }
+    /**
+     * Mybatis-plus 根据指定数组字段批量更新数据
+     */
+    @Test
+    public void testUpdateBatchX() {
+        //LambdaQueryWrapper，调用方法封装条件
+        List<String> roleCodeList = new ArrayList<>();
+        roleCodeList.add("role1");
+        roleCodeList.add("role2");
+        //调用mp方法实现查询操作
+        SysRole sysRole = new SysRole();
+        sysRole.setDescription("测试管理员");
+
+        int rows = mapper.update(sysRole, new UpdateWrapper<SysRole>()
+                .in("role_code", roleCodeList));
+        System.out.println(rows);
+        // 方案二
+        UpdateWrapper<SysRole> updateWrapper = new UpdateWrapper<>();
+        updateWrapper.in("role_code", roleCodeList)
+                .set("description", "2天更新就对了")
+                .set("role_name", "角色管理员");
+        int rows2 = mapper.update(null, updateWrapper);
+    }
+
+
+
+
+
+
 }
