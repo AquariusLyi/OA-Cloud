@@ -5,11 +5,13 @@ import com.atguigu.model.system.SysRole;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.google.common.base.Function;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -81,8 +83,23 @@ public class TestMpDemo1 {
         //LambdaQueryWrapper，调用方法封装条件
         LambdaQueryWrapper<SysRole> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(SysRole::getRoleName,"atguigu角色管理员");
-        //调用mp方法实现查询操作
         List<SysRole> list = mapper.selectList(wrapper);
         System.out.println(list);
+    }
+
+    /**
+     * Mybatis-plus 自定义数组字段查询
+     */
+    @Test
+    public void testQueryBatchX() {
+        //LambdaQueryWrapper，调用方法封装条件
+        List<String> roleCode = new ArrayList<>();
+        roleCode.add("role1");
+        roleCode.add("role2");
+        LambdaQueryWrapper<SysRole> wrapper = new LambdaQueryWrapper<>();
+        wrapper.in(SysRole::getRoleCode,roleCode);
+        //调用mp方法实现查询操作
+        List<SysRole> sysRoles = mapper.selectList(wrapper);
+        System.out.println(sysRoles);
     }
 }
