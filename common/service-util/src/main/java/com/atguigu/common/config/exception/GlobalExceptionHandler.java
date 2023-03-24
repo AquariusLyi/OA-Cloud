@@ -18,7 +18,11 @@ public class GlobalExceptionHandler {
         return Result.fail().message("执行全局异常处理...");
     }
 
-    //特定异常处理
+    /**
+     * 特定异常处理 ArithmeticException 出现这个异常就走这个处理
+     * @param e
+     * @return
+     */
     @ExceptionHandler(ArithmeticException.class)
     @ResponseBody
     public Result error(ArithmeticException e) {

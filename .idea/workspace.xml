@@ -4,11 +4,108 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f1aa1b7-56d9-46b0-b59b-d69f2c87ba07" name="Changes" comment="" />
+    <list default="true" id="5f1aa1b7-56d9-46b0-b59b-d69f2c87ba07" name="Changes" comment="引入mockito依赖">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-util/target/classes/com/atguigu/common/jwt/JwtHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/target/classes/com/atguigu/common/jwt/JwtHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-util/target/classes/com/atguigu/common/result/ResponseUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/target/classes/com/atguigu/common/result/ResponseUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-util/target/classes/com/atguigu/common/result/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/target/classes/com/atguigu/common/result/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-util/target/classes/com/atguigu/common/result/ResultCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/target/classes/com/atguigu/common/result/ResultCodeEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-util/target/classes/com/atguigu/common/utils/MD5.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-util/target/classes/com/atguigu/common/utils/MD5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/common/config/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/common/config/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/target/classes/com/atguigu/common/config/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/target/classes/com/atguigu/common/config/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/target/classes/com/atguigu/common/config/exception/GuiguException.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/target/classes/com/atguigu/common/config/exception/GuiguException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/target/classes/com/atguigu/common/config/mp/MybatisPlusConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/target/classes/com/atguigu/common/config/mp/MybatisPlusConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/custom/CustomMd5PasswordEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/custom/CustomMd5PasswordEncoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/custom/CustomUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/custom/CustomUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/custom/LoginUserInfoHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/custom/LoginUserInfoHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/custom/UserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/custom/UserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/filter/TokenAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/filter/TokenAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/filter/TokenLoginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/spring-security/target/classes/com/atguigu/security/filter/TokenLoginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/base/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/base/BaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/process/Process.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/process/Process.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/process/ProcessRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/process/ProcessRecord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/process/ProcessTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/process/ProcessTemplate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/process/ProcessType.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/process/ProcessType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysDept.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysDept.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysLoginLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysLoginLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysOperLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysOperLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysPost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysRoleMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysRoleMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysUserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/system/SysUserRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/wechat/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/model/wechat/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/process/ApprovalVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/process/ApprovalVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/process/ProcessFormVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/process/ProcessFormVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/process/ProcessQueryVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/process/ProcessQueryVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/process/ProcessVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/process/ProcessVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/AssginMenuVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/AssginMenuVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/AssginRoleVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/AssginRoleVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/LoginVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/LoginVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/MetaVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/MetaVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/RouterVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/RouterVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/SysLoginLogQueryVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/SysLoginLogQueryVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/SysOperLogQueryVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/SysOperLogQueryVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/SysPostQueryVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/SysPostQueryVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/SysRoleQueryVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/SysRoleQueryVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/SysUserQueryVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/system/SysUserQueryVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/wechat/BindPhoneVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/wechat/BindPhoneVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/wechat/MenuVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/vo/wechat/MenuVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/ServiceAuthApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/ServiceAuthApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/controller/SysMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/controller/SysMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/controller/SysRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/controller/SysRoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/controller/SysUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/mapper/SysMenuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/mapper/SysMenuMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/SysMenuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/SysMenuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/SysRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/SysRoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/SysUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/SysUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/impl/SysMenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/impl/SysMenuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/impl/SysRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/impl/SysRoleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/impl/SysUserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/impl/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/service/impl/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/utils/MenuHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/auth/utils/MenuHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/controller/OaProcessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/controller/OaProcessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/controller/OaProcessTemplateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/controller/OaProcessTemplateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/controller/OaProcessTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/controller/OaProcessTypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/controller/api/ProcessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/controller/api/ProcessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/controller/api/WechatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/controller/api/WechatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/mapper/OaProcessMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/mapper/OaProcessMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/MessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/OaProcessRecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/OaProcessRecordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/OaProcessService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/OaProcessService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/OaProcessTemplateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/OaProcessTemplateService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/impl/MessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/impl/MessageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/impl/OaProcessRecordServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/impl/OaProcessRecordServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/impl/OaProcessServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/impl/OaProcessServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/impl/OaProcessTemplateServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/process/service/impl/OaProcessTemplateServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/wechat/config/WechatAccountConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/wechat/config/WechatAccountConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/wechat/service/impl/MenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/classes/com/atguigu/wechat/service/impl/MenuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/test-classes/com/atguigu/auth/TestMpDemo1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/test-classes/com/atguigu/auth/TestMpDemo2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/test-classes/com/atguigu/auth/activiti/MyTaskListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/test-classes/com/atguigu/auth/activiti/ProcessTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/test-classes/com/atguigu/auth/activiti/ProcessTestDemo1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/test-classes/com/atguigu/auth/activiti/ProcessTestDemo2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/test-classes/com/atguigu/auth/activiti/ProcessTestDemo3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/test-classes/com/atguigu/auth/activiti/ProcessTestGateway.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/test-classes/com/atguigu/auth/activiti/UserBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/target/test-classes/com/atguigu/code/CodeGet.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -16,10 +113,13 @@
         <option value="Enum" />
         <option value="new-activiti-diagram.bpmn20" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -33,6 +133,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2KAQWNkyVAB7Tn6NlJIYfjqJwiZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,10 +147,14 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_opened_file_path": "C:/Users/Administrator/Desktop/guigu-oa/guigu-oa-parent/service-oa/target/classes/static",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
     "spring.configuration.checksum": "8a604bca848cb439ecf3b1c0c25b4f2b"
   }
 }]]></component>
@@ -69,71 +174,72 @@
       <recent name="com.atguigu.auth" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.mockito" />
       <recent name="com.atguigu.auth.activiti" />
       <recent name="com.atguigu.security.config" />
       <recent name="com.atguigu.auth" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestMpDemo1.testQuery1">
-    <configuration name="ProcessTest.startProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-oa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.auth.activiti.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.auth.activiti" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.auth.activiti.ProcessTest" />
-      <option name="METHOD_NAME" value="startProcess" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestMpDemo1.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-oa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.auth.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.auth" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.auth.TestMpDemo1" />
-      <option name="METHOD_NAME" value="add" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestMpDemo1.testUpdateBatchX">
     <configuration name="TestMpDemo1.testQuery1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service-oa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.auth.*" />
+          <option name="PATTERN" value="com.atguigu.mybatisplus.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.auth" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.auth.TestMpDemo1" />
+      <option name="PACKAGE_NAME" value="com.atguigu.mybatisplus" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mybatisplus.TestMpDemo1" />
       <option name="METHOD_NAME" value="testQuery1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMpDemo1.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMpDemo1.testQuery2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service-oa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.auth.*" />
+          <option name="PATTERN" value="com.atguigu.mybatisplus.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.auth" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.auth.TestMpDemo1" />
-      <option name="METHOD_NAME" value="update" />
+      <option name="PACKAGE_NAME" value="com.atguigu.mybatisplus" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mybatisplus.TestMpDemo1" />
+      <option name="METHOD_NAME" value="testQuery2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMpDemo1.testQueryBatchX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-oa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.mybatisplus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.mybatisplus" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mybatisplus.TestMpDemo1" />
+      <option name="METHOD_NAME" value="testQueryBatchX" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMpDemo1.testUpdateBatchX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-oa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.mybatisplus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.mybatisplus" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mybatisplus.TestMpDemo1" />
+      <option name="METHOD_NAME" value="testUpdateBatchX" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,23 +259,26 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestMpDemo1.add" />
       <item itemvalue="JUnit.TestMpDemo1.testQuery1" />
-      <item itemvalue="JUnit.TestMpDemo1.update" />
-      <item itemvalue="JUnit.ProcessTest.startProcess" />
+      <item itemvalue="JUnit.TestMpDemo1.testQuery2" />
+      <item itemvalue="JUnit.TestMpDemo1.testQueryBatchX" />
+      <item itemvalue="JUnit.TestMpDemo1.testUpdateBatchX" />
       <item itemvalue="Spring Boot.ServiceAuthApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestMpDemo1.testQuery1" />
-        <item itemvalue="JUnit.TestMpDemo1.update" />
-        <item itemvalue="JUnit.TestMpDemo1.add" />
+        <item itemvalue="JUnit.TestMpDemo1.testUpdateBatchX" />
+        <item itemvalue="JUnit.TestMpDemo1.testQueryBatchX" />
+        <item itemvalue="JUnit.TestMpDemo1.testQuery2" />
         <item itemvalue="Spring Boot.ServiceAuthApplication" />
-        <item itemvalue="JUnit.ProcessTest.startProcess" />
+        <item itemvalue="JUnit.TestMpDemo1.testQuery1" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5f1aa1b7-56d9-46b0-b59b-d69f2c87ba07" name="Changes" comment="" />
@@ -202,12 +311,60 @@
       <workItem from="1676421272866" duration="23754000" />
       <workItem from="1676510776984" duration="23537000" />
       <workItem from="1676596185003" duration="32154000" />
-      <workItem from="1679118812789" duration="7118000" />
+      <workItem from="1679118812789" duration="27971000" />
+      <workItem from="1679674280754" duration="165000" />
     </task>
+    <task id="LOCAL-00001" summary="提交mapstruct">
+      <created>1679498745311</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679498745311</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Mybatis-plus 自定义数组字段查询">
+      <created>1679582710261</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679582710261</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Mybatis-plus 根据指定数组字段批量更新数据">
+      <created>1679585602855</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679585602855</updated>
+    </task>
+    <task id="LOCAL-00004" summary="引入mockito依赖">
+      <created>1679673575744</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679673575744</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="提交mapstruct" />
+    <MESSAGE value="Mybatis-plus 自定义数组字段查询" />
+    <MESSAGE value="Mybatis-plus 根据指定数组字段批量更新数据" />
+    <MESSAGE value="引入mockito依赖" />
+    <option name="LAST_COMMIT_MESSAGE" value="引入mockito依赖" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -228,9 +385,19 @@
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/auth/TestMpDemo1.java</url>
-          <line>75</line>
+          <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mybatisplus/TestMpDemo1.java</url>
+          <line>81</line>
           <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/controller/SysRoleController.java</url>
+          <line>156</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mybatisplus/TestMpDemo1.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -8,6 +8,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+
 @SpringBootTest
 public class MockitoDemo1 {
 
@@ -18,8 +21,21 @@ public class MockitoDemo1 {
     //查询所有记录
     @Test
     public void getAll() {
-        List<SysRole> list = service.list();
-        System.out.println(list);
+        // mock creation 创建mock对象
+
+        List mockedList = mock(List.class);
+
+    //using mock object 使用mock对象
+
+        mockedList.add("one");
+
+        mockedList.clear();
+
+   //verification 验证
+
+        verify(mockedList).add("one");
+
+        verify(mockedList).clear();
     }
 
 }
