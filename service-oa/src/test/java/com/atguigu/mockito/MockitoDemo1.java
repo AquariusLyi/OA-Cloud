@@ -22,19 +22,10 @@ public class MockitoDemo1 {
     @Test
     public void getAll() {
         // mock creation 创建mock对象
-
         List mockedList = mock(List.class);
-
-    //using mock object 使用mock对象
-
         mockedList.add("one");
-
         mockedList.clear();
-
-   //verification 验证
-
         verify(mockedList).add("one");
-
         verify(mockedList).clear();
     }
 
