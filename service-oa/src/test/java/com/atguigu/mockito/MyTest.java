@@ -1,5 +1,6 @@
 package com.atguigu.mockito;
 
+import com.atguigu.common.http.gpt01.HttpUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
@@ -13,6 +14,7 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import java.io.ByteArrayInputStream;
+import java.util.Map;
 
 public class MyTest {
 
@@ -50,6 +52,7 @@ public class MyTest {
         // 验证响应内容是否正确
         Assert.assertEquals("Hello, world!", response);
     }
+
     @Test
     public void testMockHttpPost() throws Exception {
         // 创建 HttpClient 的 Mock 对象
@@ -75,7 +78,9 @@ public class MyTest {
 
         // 发送 Mock 请求并获取响应内容
         String response = EntityUtils.toString(httpClient.execute(httpPost).getEntity());
-
+        String body = "{\"key\": \"value\"}";
+        Map<String, String> headers = HttpUtils.getDefaultHeaders();
+        String response2 = HttpUtils.post("https://www.example.com", headers, body);
         // 验证响应内容是否正确
         Assert.assertEquals("Hello, world!", response);
     }
