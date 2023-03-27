@@ -30,8 +30,8 @@ public class MyTest01 {
         PowerMockito.when(MyClassB.myStaticMethodB()).thenReturn("mock MyClassB");
 
         String s = myClass.myStaticMethod();// 这里可以看出已经拼接
-        System.out.println();
-        Assert.assertEquals("mock result", "");
+        System.out.println(s);
+        Assert.assertEquals("actual resultmock MyClassB", s);
     }
 
 }
