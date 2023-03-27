@@ -7,7 +7,6 @@ import com.atguigu.model.system.SysRole;
 import com.atguigu.vo.system.AssginRoleVo;
 import com.atguigu.vo.system.SysRoleQueryVo;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
@@ -76,7 +75,7 @@ public class SysRoleController {
     //条件分页查询
     //page 当前页  limit 每页显示记录数
     //SysRoleQueryVo 条件对象
-    @PreAuthorize("hasAuthority('bnt.sysRole.list')")
+    // @PreAuthorize("hasAuthority('bnt.sysRole.list')")
     @ApiOperation("条件分页查询")
     @GetMapping("{page}/{limit}")
     public Result pageQueryRole(@PathVariable Long page,

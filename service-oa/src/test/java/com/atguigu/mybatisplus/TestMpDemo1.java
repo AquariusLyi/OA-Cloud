@@ -2,22 +2,16 @@ package com.atguigu.mybatisplus;
 
 import com.atguigu.auth.mapper.SysRoleMapper;
 import com.atguigu.model.system.SysRole;
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
-import com.baomidou.mybatisplus.core.enums.SqlMethod;
-import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
-import com.baomidou.mybatisplus.core.toolkit.Constants;
-import com.google.common.base.Function;
-import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @SpringBootTest
 public class TestMpDemo1 {
@@ -134,8 +128,14 @@ public class TestMpDemo1 {
         int rows2 = mapper.update(null, updateWrapper);
     }
 
+    /**
+     * Mybatis-plus 自定义数组字段查询
+     */
+    @Test
+    public void testQueryPageBatchX() {
 
-
+        System.out.println();
+    }
 
 
 

@@ -123,7 +123,7 @@ public class HttpUtils {
         return post(url, getDefaultHeaders(), body);
     }
 
-    private static Map<String, String> getDefaultHeaders() {
+    public static Map<String, String> getDefaultHeaders() {
         Map<String, String> headers = new HashMap<>();
         headers.put("Accept", "application/json");
         headers.put("Content-Type", "application/json;charset=utf-8");

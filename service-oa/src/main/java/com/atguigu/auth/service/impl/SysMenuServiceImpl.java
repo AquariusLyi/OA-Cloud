@@ -1,24 +1,24 @@
 package com.atguigu.auth.service.impl;
 
+import com.atguigu.auth.mapper.SysMenuMapper;
+import com.atguigu.auth.service.SysMenuService;
 import com.atguigu.auth.service.SysRoleMenuService;
 import com.atguigu.auth.utils.MenuHelper;
 import com.atguigu.common.config.exception.GuiguException;
 import com.atguigu.model.system.SysMenu;
-import com.atguigu.auth.mapper.SysMenuMapper;
-import com.atguigu.auth.service.SysMenuService;
 import com.atguigu.model.system.SysRoleMenu;
 import com.atguigu.vo.system.AssginMenuVo;
 import com.atguigu.vo.system.MetaVo;
 import com.atguigu.vo.system.RouterVo;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -34,6 +34,8 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
 
     @Autowired
     private SysRoleMenuService sysRoleMenuService;
+    @Autowired
+    private SysMenuMapper sysMenuMapper;
     //菜单列表接口
     @Override
     public List<SysMenu> findNodes() {
@@ -58,14 +60,21 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
     //删除菜单
     @Override
     public void removeMenuById(Long id) {
+//        try {
+//            String body = "{\"key\": \"value\"}";
+//            Map<String, String> headers = HttpUtils.getDefaultHeaders();
+//            String response2 = HttpUtils.post("https://www.example.com", headers, body);
+//        } catch (IOException e) {
+//        }
+
         //判断当前菜单是否有下一层菜单
         LambdaQueryWrapper<SysMenu> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(SysMenu::getParentId,id);
-        Integer count = baseMapper.selectCount(wrapper);
+        Integer count = sysMenuMapper.selectCount(wrapper);
         if(count > 0) {
             throw new GuiguException(201,"菜单不能删除");
         }
-        baseMapper.deleteById(id);
+        sysMenuMapper.deleteById(id);
     }
 
     //查询所有菜单和角色分配的菜单
