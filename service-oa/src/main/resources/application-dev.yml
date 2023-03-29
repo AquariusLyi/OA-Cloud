@@ -1,8 +1,8 @@
 server:
   port: 8800
 mybatis-plus:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 查看日志
+  # configuration:
+    # log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 查看日志
   mapper-locations: classpath:com/atguigu/*/mapper/xml/*.xml
 spring:
   datasource:

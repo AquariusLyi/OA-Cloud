@@ -15,6 +15,7 @@ public class MyTest01 {
 
 
     /**
+     * powermockito解决静态方法 静态工具类 http调用案例
      * 1.必须导入@RunWith(PowerMockRunner.class) @PrepareForTest({HttpUtils.class,MyClassB.class})
      * 2. PowerMockito.when(HttpUtils.post(Mockito.any(),Mockito.any(),Mockito.any())).thenReturn("mock result");
      * @throws Exception
