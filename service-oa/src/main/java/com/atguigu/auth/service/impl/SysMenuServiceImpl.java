@@ -70,6 +70,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
             String body = "{\"key\": \"value\"}";
             Map<String, String> headers = HttpUtils.getDefaultHeaders();
             String response2 = HttpUtils.post("https://www.example.com", headers, body);
+            System.out.println();
         } catch (IOException e) {
             throw new IOException(""+e.getMessage());
         }

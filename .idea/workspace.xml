@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f1aa1b7-56d9-46b0-b59b-d69f2c87ba07" name="Changes" comment="mock 异常处理">
+    <list default="true" id="5f1aa1b7-56d9-46b0-b59b-d69f2c87ba07" name="Changes" comment="解决：misusing.NotAMockException: Argument should be a mock, but is: class java.lang.Class异常&#10;原因：mockitojar包版本问题，一定要跟powermockito兼容">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-oa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/service/impl/SysMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/service/impl/SysMenuServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/all/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/all/MyTest.java" afterDir="false" />
     </list>
@@ -102,23 +101,7 @@
       <recent name="com.atguigu.mockito" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest.testMockNestedMethod">
-    <configuration name="MyTest01.testDoSomething2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-oa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.mockito.doAnswer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.mockito.doAnswer" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.mockito.doAnswer.MyTest01" />
-      <option name="METHOD_NAME" value="testDoSomething2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MyTest.testMockThrow">
     <configuration name="MyTest01.testMockStaticMethod02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service-oa" />
       <extension name="coverage">
@@ -167,6 +150,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyTest.testMockThrow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-oa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.mockito.all.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.mockito.all" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mockito.all.MyTest" />
+      <option name="METHOD_NAME" value="testMockThrow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="callRealMethodTest.callRealMethodTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service-oa" />
       <extension name="coverage">
@@ -192,19 +191,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.MyTest.testMockNestedMethod2" />
+      <item itemvalue="JUnit.MyTest.testMockThrow" />
       <item itemvalue="JUnit.MyTest01.testMockStaticMethod02" />
       <item itemvalue="JUnit.MyTest.testMockNestedMethod" />
-      <item itemvalue="JUnit.MyTest01.testDoSomething2" />
       <item itemvalue="JUnit.callRealMethodTest.callRealMethodTest" />
       <item itemvalue="Spring Boot.ServiceAuthApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyTest.testMockThrow" />
         <item itemvalue="JUnit.MyTest.testMockNestedMethod" />
         <item itemvalue="JUnit.MyTest01.testMockStaticMethod02" />
         <item itemvalue="JUnit.MyTest.testMockNestedMethod2" />
         <item itemvalue="JUnit.callRealMethodTest.callRealMethodTest" />
-        <item itemvalue="JUnit.MyTest01.testDoSomething2" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +246,7 @@
       <workItem from="1679118812789" duration="27971000" />
       <workItem from="1679674280754" duration="165000" />
       <workItem from="1679752145150" duration="34938000" />
-      <workItem from="1680347856233" duration="7373000" />
+      <workItem from="1680347856233" duration="8890000" />
     </task>
     <task id="LOCAL-00001" summary="提交mapstruct">
       <created>1679498745311</created>
@@ -319,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680436352778</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="解决：misusing.NotAMockException: Argument should be a mock, but is: class java.lang.Class异常&#10;原因：mockitojar包版本问题，一定要跟powermockito兼容">
+      <created>1680446593187</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680446593187</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +364,8 @@
     <MESSAGE value="powermockito mock 静态方法 http工具类（补充断言）" />
     <MESSAGE value="mock doSomething方法使用" />
     <MESSAGE value="mock 异常处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="mock 异常处理" />
+    <MESSAGE value="解决：misusing.NotAMockException: Argument should be a mock, but is: class java.lang.Class异常&#10;原因：mockitojar包版本问题，一定要跟powermockito兼容" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决：misusing.NotAMockException: Argument should be a mock, but is: class java.lang.Class异常&#10;原因：mockitojar包版本问题，一定要跟powermockito兼容" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -449,11 +456,6 @@
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/service/impl/SysMenuServiceImpl.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/donothing/MyTest01.java</url>
           <line>33</line>
           <option name="timeStamp" value="92" />
@@ -469,14 +471,9 @@
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/all/MyTest.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/service/impl/SysMenuServiceImpl.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="100" />
+          <line>65</line>
+          <option name="timeStamp" value="103" />
         </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
