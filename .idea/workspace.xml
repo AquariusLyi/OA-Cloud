@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f1aa1b7-56d9-46b0-b59b-d69f2c87ba07" name="Changes" comment="mock doSomething方法使用">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/model/system/SysRoleMenuDTO.java" afterDir="false" />
+    <list default="true" id="5f1aa1b7-56d9-46b0-b59b-d69f2c87ba07" name="Changes" comment="mock 异常处理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/model/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-oa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/controller/SysMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/controller/SysMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/service/SysMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/service/SysMenuService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/service/impl/SysMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/service/impl/SysMenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/MockitoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/MockitoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/donothing/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/all/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/all/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/all/MyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,38 +103,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.MyTest.testMockNestedMethod">
-    <configuration name="MyTest01.syp_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-oa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.mockito.spy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.mockito.spy" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.mockito.spy.MyTest01" />
-      <option name="METHOD_NAME" value="syp_test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyTest01.testDoSomething" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-oa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.mockito.doAnswer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.mockito.doAnswer" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.mockito.doAnswer.MyTest01" />
-      <option name="METHOD_NAME" value="testDoSomething" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MyTest01.testDoSomething2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service-oa" />
       <extension name="coverage">
@@ -157,6 +119,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyTest01.testMockStaticMethod02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-oa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.mockito.donothing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.mockito.donothing" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mockito.donothing.MyTest01" />
+      <option name="METHOD_NAME" value="testMockStaticMethod02" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyTest.testMockNestedMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service-oa" />
       <extension name="coverage">
@@ -168,6 +146,22 @@
       <option name="PACKAGE_NAME" value="com.atguigu.mockito.all" />
       <option name="MAIN_CLASS_NAME" value="com.atguigu.mockito.all.MyTest" />
       <option name="METHOD_NAME" value="testMockNestedMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyTest.testMockNestedMethod2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-oa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.mockito.all.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.mockito.all" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mockito.all.MyTest" />
+      <option name="METHOD_NAME" value="testMockNestedMethod2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -197,9 +191,9 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.MyTest.testMockNestedMethod2" />
+      <item itemvalue="JUnit.MyTest01.testMockStaticMethod02" />
       <item itemvalue="JUnit.MyTest.testMockNestedMethod" />
-      <item itemvalue="JUnit.MyTest01.syp_test" />
-      <item itemvalue="JUnit.MyTest01.testDoSomething" />
       <item itemvalue="JUnit.MyTest01.testDoSomething2" />
       <item itemvalue="JUnit.callRealMethodTest.callRealMethodTest" />
       <item itemvalue="Spring Boot.ServiceAuthApplication" />
@@ -207,10 +201,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MyTest.testMockNestedMethod" />
+        <item itemvalue="JUnit.MyTest01.testMockStaticMethod02" />
+        <item itemvalue="JUnit.MyTest.testMockNestedMethod2" />
         <item itemvalue="JUnit.callRealMethodTest.callRealMethodTest" />
         <item itemvalue="JUnit.MyTest01.testDoSomething2" />
-        <item itemvalue="JUnit.MyTest01.testDoSomething" />
-        <item itemvalue="JUnit.MyTest01.syp_test" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +247,7 @@
       <workItem from="1679118812789" duration="27971000" />
       <workItem from="1679674280754" duration="165000" />
       <workItem from="1679752145150" duration="34938000" />
-      <workItem from="1680347856233" duration="3659000" />
+      <workItem from="1680347856233" duration="7373000" />
     </task>
     <task id="LOCAL-00001" summary="提交mapstruct">
       <created>1679498745311</created>
@@ -318,11 +312,29 @@
       <option name="project" value="LOCAL" />
       <updated>1680097719883</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="mock 异常处理">
+      <created>1680436352778</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680436352778</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -345,7 +357,8 @@
     <MESSAGE value="powermockito mock 静态方法 http工具类" />
     <MESSAGE value="powermockito mock 静态方法 http工具类（补充断言）" />
     <MESSAGE value="mock doSomething方法使用" />
-    <option name="LAST_COMMIT_MESSAGE" value="mock doSomething方法使用" />
+    <MESSAGE value="mock 异常处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="mock 异常处理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -436,14 +449,34 @@
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/all/MyTest.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="81" />
+          <url>file://$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/service/impl/SysMenuServiceImpl.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/donothing/MyTest01.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/common-util/src/main/java/com/atguigu/common/http/gpt01/HttpUtils.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/donothing/MyTest01.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/all/MyTest.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="85" />
+          <line>51</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-oa/src/main/java/com/atguigu/auth/service/impl/SysMenuServiceImpl.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="100" />
         </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
@@ -457,7 +490,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/OA_Cloud$MyTest_testMockNestedMethod.ic" NAME="MyTest.testMockNestedMethod Coverage Results" MODIFIED="1680103513337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/OA_Cloud$MyTest_testMockNestedMethod.ic" NAME="MyTest.testMockNestedMethod Coverage Results" MODIFIED="1680438443270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.atguigu.mockito.all.*</FILTER>
     </SUITE>
   </component>
