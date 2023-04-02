@@ -18,6 +18,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 
 import static org.mockito.ArgumentMatchers.any;
 
@@ -80,7 +81,7 @@ public class MockitoTest {
 
 
     @Test
-    public void testServiceSignIn() {
+    public void testServiceSignIn() throws IOException {
         long myLong = 123456789L; // 通过"L"后缀指定long类型
 
         // 创建返回的模拟用户数据：王五

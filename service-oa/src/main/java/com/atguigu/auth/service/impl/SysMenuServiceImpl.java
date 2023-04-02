@@ -5,6 +5,7 @@ import com.atguigu.auth.service.SysMenuService;
 import com.atguigu.auth.service.SysRoleMenuService;
 import com.atguigu.auth.utils.MenuHelper;
 import com.atguigu.common.config.exception.GuiguException;
+import com.atguigu.common.http.gpt01.HttpUtils;
 import com.atguigu.model.system.SysMenu;
 import com.atguigu.model.system.SysRoleMenu;
 import com.atguigu.vo.system.AssginMenuVo;
@@ -17,8 +18,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -59,13 +62,18 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
 
     //删除菜单
     @Override
-    public void removeMenuById(Long id) {
-//        try {
-//            String body = "{\"key\": \"value\"}";
-//            Map<String, String> headers = HttpUtils.getDefaultHeaders();
-//            String response2 = HttpUtils.post("https://www.example.com", headers, body);
-//        } catch (IOException e) {
-//        }
+    public void removeMenuById(Long id) throws IOException {
+        if( id == null){
+            throw new IOException("id 不能为空");
+        }
+        try {
+            String body = "{\"key\": \"value\"}";
+            Map<String, String> headers = HttpUtils.getDefaultHeaders();
+            String response2 = HttpUtils.post("https://www.example.com", headers, body);
+        } catch (IOException e) {
+            throw new IOException(""+e.getMessage());
+        }
+
 
         //判断当前菜单是否有下一层菜单
         LambdaQueryWrapper<SysMenu> wrapper = new LambdaQueryWrapper<>();

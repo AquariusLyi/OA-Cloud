@@ -5,6 +5,7 @@ import com.atguigu.vo.system.AssginMenuVo;
 import com.atguigu.vo.system.RouterVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -21,7 +22,7 @@ public interface SysMenuService extends IService<SysMenu> {
     List<SysMenu> findNodes();
 
     //删除菜单
-    void removeMenuById(Long id);
+    void removeMenuById(Long id) throws IOException;
 
     //查询所有菜单和角色分配的菜单
     List<SysMenu> findMenuByRoleId(Long roleId);

@@ -10,6 +10,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -68,7 +69,7 @@ public class SysMenuController {
 
     @ApiOperation(value = "删除菜单")
     @DeleteMapping("remove/{id}")
-    public Result remove(@PathVariable Long id) {
+    public Result remove(@PathVariable Long id) throws IOException {
         sysMenuService.removeMenuById(id);
         return Result.ok();
     }
