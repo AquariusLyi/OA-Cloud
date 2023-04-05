@@ -22,7 +22,9 @@ public interface SysMenuService extends IService<SysMenu> {
     List<SysMenu> findNodes();
 
     //删除菜单
-    void removeMenuById(Long id) throws IOException;
+    void removeMenuById(Long id) ;
+
+    void removeMenuById_Test(Long id) throws IOException;
 
     //查询所有菜单和角色分配的菜单
     List<SysMenu> findMenuByRoleId(Long roleId);

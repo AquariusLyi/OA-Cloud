@@ -62,7 +62,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
 
     //删除菜单
     @Override
-    public void removeMenuById(Long id) throws IOException {
+    public void removeMenuById_Test(Long id) throws IOException {
         if( id == null){
             throw new IOException("id 不能为空");
         }
@@ -76,6 +76,17 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         }
 
 
+        //判断当前菜单是否有下一层菜单
+        LambdaQueryWrapper<SysMenu> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(SysMenu::getParentId,id);
+        Integer count = sysMenuMapper.selectCount(wrapper);
+        if(count > 0) {
+            throw new GuiguException(201,"菜单不能删除");
+        }
+        sysMenuMapper.deleteById(id);
+    }
+    @Override
+    public void removeMenuById(Long id)  {
         //判断当前菜单是否有下一层菜单
         LambdaQueryWrapper<SysMenu> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(SysMenu::getParentId,id);
