@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f1aa1b7-56d9-46b0-b59b-d69f2c87ba07" name="Changes" comment="解决：mock无返回值方法&#10;原因：">
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/model/system/ProdInfo.java" afterDir="false" />
+    <list default="true" id="5f1aa1b7-56d9-46b0-b59b-d69f2c87ba07" name="Changes" comment="解决：SysMenuServiceImpl增加专门用于测试的方法，避免影响正常流程&#10;原因：">
+      <change afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/jdk/Jdk01Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/all/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/all/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/common/config/mp/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/common/config/mp/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mybatisplus/TestMpDemo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mybatisplus/PageWrapperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,25 +95,25 @@
       <recent name="com.atguigu.auth" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.jdk" />
       <recent name="com.atguigu.model.system" />
       <recent name="com.atguigu.mockito.all" />
       <recent name="com.atguigu.mockito.doAnswer" />
       <recent name="com.atguigu.mockito.spy" />
-      <recent name="com.atguigu.mockito.donothing" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest.testListString">
-    <configuration name="MyTest01.testMockStaticMethod02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Jdk01Test.getListStrByStr">
+    <configuration name="Jdk01Test.getListStrByStr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service-oa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.mockito.donothing.*" />
+          <option name="PATTERN" value="com.atguigu.jdk.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.mockito.donothing" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.mockito.donothing.MyTest01" />
-      <option name="METHOD_NAME" value="testMockStaticMethod02" />
+      <option name="PACKAGE_NAME" value="com.atguigu.jdk" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.jdk.Jdk01Test" />
+      <option name="METHOD_NAME" value="getListStrByStr" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,22 +151,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.testMockNestedMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-oa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.mockito.all.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.mockito.all" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.mockito.all.MyTest" />
-      <option name="METHOD_NAME" value="testMockNestedMethod" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MyTest.testMockThrow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="service-oa" />
       <extension name="coverage">
@@ -182,6 +167,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PageWrapperTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="service-oa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.mybatisplus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.mybatisplus" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.mybatisplus.PageWrapperTest" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServiceAuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="service-oa" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.ServiceAuthApplication" />
@@ -190,20 +191,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.Jdk01Test.getListStrByStr" />
       <item itemvalue="JUnit.MyTest.testListString" />
       <item itemvalue="JUnit.MyTest.testList去重" />
       <item itemvalue="JUnit.MyTest.testMockThrow" />
-      <item itemvalue="JUnit.MyTest01.testMockStaticMethod02" />
-      <item itemvalue="JUnit.MyTest.testMockNestedMethod" />
+      <item itemvalue="JUnit.PageWrapperTest.getAll" />
       <item itemvalue="Spring Boot.ServiceAuthApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Jdk01Test.getListStrByStr" />
+        <item itemvalue="JUnit.PageWrapperTest.getAll" />
         <item itemvalue="JUnit.MyTest.testListString" />
         <item itemvalue="JUnit.MyTest.testList去重" />
         <item itemvalue="JUnit.MyTest.testMockThrow" />
-        <item itemvalue="JUnit.MyTest.testMockNestedMethod" />
-        <item itemvalue="JUnit.MyTest01.testMockStaticMethod02" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +247,7 @@
       <workItem from="1679118812789" duration="27971000" />
       <workItem from="1679674280754" duration="165000" />
       <workItem from="1679752145150" duration="34938000" />
-      <workItem from="1680347856233" duration="15813000" />
+      <workItem from="1680347856233" duration="24137000" />
     </task>
     <task id="LOCAL-00001" summary="提交mapstruct">
       <created>1679498745311</created>
@@ -332,7 +333,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680449132935</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="解决：2个对象类型的List 去除重复的name&#10;原因：">
+      <created>1680670051847</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680670051847</updated>
+    </task>
+    <task id="LOCAL-00014" summary="解决：SysMenuServiceImpl增加专门用于测试的方法，避免影响正常流程&#10;原因：">
+      <created>1680678243624</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680678243624</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +388,9 @@
     <MESSAGE value="mock 异常处理" />
     <MESSAGE value="解决：misusing.NotAMockException: Argument should be a mock, but is: class java.lang.Class异常&#10;原因：mockitojar包版本问题，一定要跟powermockito兼容" />
     <MESSAGE value="解决：mock无返回值方法&#10;原因：" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决：mock无返回值方法&#10;原因：" />
+    <MESSAGE value="解决：2个对象类型的List 去除重复的name&#10;原因：" />
+    <MESSAGE value="解决：SysMenuServiceImpl增加专门用于测试的方法，避免影响正常流程&#10;原因：" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决：SysMenuServiceImpl增加专门用于测试的方法，避免影响正常流程&#10;原因：" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -492,6 +509,16 @@
           <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mockito/all/MyTest.java</url>
           <line>127</line>
           <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/jdk/Jdk01Test.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mybatisplus/PageWrapperTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
