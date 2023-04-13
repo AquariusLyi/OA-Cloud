@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f1aa1b7-56d9-46b0-b59b-d69f2c87ba07" name="Changes" comment="解决：SysMenuServiceImpl增加专门用于测试的方法，避免影响正常流程&#10;原因：">
-      <change afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/jdk/Jdk01Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/common/config/mp/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/atguigu/common/config/mp/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mybatisplus/TestMpDemo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/test/java/com/atguigu/mybatisplus/PageWrapperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +41,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="$PROJECT_DIR$/../../../../CodeTools/apache-maven-3.6.3/canku" />
-        <option name="userSettingsFile" value="$PROJECT_DIR$/../../../../CodeTools/apache-maven-3.6.3/conf/settings.xml" />
+        <option name="localRepository" value="$USER_HOME$/CodeTools/apache-maven-3.6.3/canku" />
+        <option name="userSettingsFile" value="$USER_HOME$/CodeTools/apache-maven-3.6.3/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
