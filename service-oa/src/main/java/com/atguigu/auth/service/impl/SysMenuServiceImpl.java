@@ -171,8 +171,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         //使用菜单操作工具类构建树形结构
         List<SysMenu> sysMenuTreeList = MenuHelper.buildTree(sysMenuList);
         //构建成框架要求的路由结构
-        List<RouterVo> routerList = this.buildRouter(sysMenuTreeList);
-        return routerList;
+        return this.buildRouter(sysMenuTreeList);
     }
 
     //构建成框架要求的路由结构
@@ -189,7 +188,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
             router.setMeta(new MetaVo(menu.getName(), menu.getIcon()));
             //下一层数据部分
             List<SysMenu> children = menu.getChildren();
-            if(menu.getType().intValue() == 1) {
+            if(menu.getType() == 1) {
                 //加载出来下面隐藏路由
                 List<SysMenu> hiddenMenuList = children.stream()
                         .filter(item -> !StringUtils.isEmpty(item.getComponent()))

@@ -44,7 +44,7 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
 //            list.add(roleId);
 //        }
         List<Long> existRoleIdList =
-                existUserRoleList.stream().map(c -> c.getRoleId()).collect(Collectors.toList());
+                existUserRoleList.stream().map(SysUserRole::getRoleId).collect(Collectors.toList());
 
         //3 根据查询所有角色id，找到对应角色信息
         //根据角色id到所有的角色的list集合进行比较
