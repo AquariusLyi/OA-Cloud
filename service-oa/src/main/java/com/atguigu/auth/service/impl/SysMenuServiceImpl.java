@@ -39,6 +39,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
     private SysRoleMenuService sysRoleMenuService;
     @Autowired
     private SysMenuMapper sysMenuMapper;
+
     //菜单列表接口
     @Override
     public List<SysMenu> findNodes() {
@@ -63,7 +64,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
     //删除菜单
     @Override
     public void removeMenuById_Test(Long id) throws IOException {
-        if( id == null){
+        if (id == null) {
             throw new IOException("id 不能为空");
         }
         try {
@@ -72,27 +73,28 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
             String response2 = HttpUtils.post("https://www.example.com", headers, body);
             System.out.println();
         } catch (IOException e) {
-            throw new IOException(""+e.getMessage());
+            throw new IOException("" + e.getMessage());
         }
 
 
         //判断当前菜单是否有下一层菜单
         LambdaQueryWrapper<SysMenu> wrapper = new LambdaQueryWrapper<>();
-        wrapper.eq(SysMenu::getParentId,id);
+        wrapper.eq(SysMenu::getParentId, id);
         Integer count = sysMenuMapper.selectCount(wrapper);
-        if(count > 0) {
-            throw new GuiguException(201,"菜单不能删除");
+        if (count > 0) {
+            throw new GuiguException(201, "菜单不能删除");
         }
         sysMenuMapper.deleteById(id);
     }
+
     @Override
-    public void removeMenuById(Long id)  {
+    public void removeMenuById(Long id) {
         //判断当前菜单是否有下一层菜单
         LambdaQueryWrapper<SysMenu> wrapper = new LambdaQueryWrapper<>();
-        wrapper.eq(SysMenu::getParentId,id);
+        wrapper.eq(SysMenu::getParentId, id);
         Integer count = sysMenuMapper.selectCount(wrapper);
-        if(count > 0) {
-            throw new GuiguException(201,"菜单不能删除");
+        if (count > 0) {
+            throw new GuiguException(201, "菜单不能删除");
         }
         sysMenuMapper.deleteById(id);
     }
@@ -102,12 +104,12 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
     public List<SysMenu> findMenuByRoleId(Long roleId) {
         //1 查询所有菜单- 添加条件 status=1
         LambdaQueryWrapper<SysMenu> wrapperSysMenu = new LambdaQueryWrapper<>();
-        wrapperSysMenu.eq(SysMenu::getStatus,1);
+        wrapperSysMenu.eq(SysMenu::getStatus, 1);
         List<SysMenu> allSysMenuList = baseMapper.selectList(wrapperSysMenu);
 
         //2 根据角色id roleId查询 角色菜单关系表里面 角色id对应所有的菜单id
         LambdaQueryWrapper<SysRoleMenu> wrapperSysRoleMenu = new LambdaQueryWrapper<>();
-        wrapperSysRoleMenu.eq(SysRoleMenu::getRoleId,roleId);
+        wrapperSysRoleMenu.eq(SysRoleMenu::getRoleId, roleId);
         List<SysRoleMenu> sysRoleMenuList = sysRoleMenuService.list(wrapperSysRoleMenu);
 
         //3 根据获取菜单id，获取对应菜单对象
@@ -115,7 +117,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
 
         //3.1 拿着菜单id 和所有菜单集合里面id进行比较，如果相同封装
         allSysMenuList.stream().forEach(item -> {
-            if(menuIdList.contains(item.getId())) {
+            if (menuIdList.contains(item.getId())) {
                 item.setSelect(true);
             } else {
                 item.setSelect(false);
@@ -132,14 +134,14 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
     public void doAssign(AssginMenuVo assginMenuVo) {
         //1 根据角色id 删除菜单角色表 分配数据
         LambdaQueryWrapper<SysRoleMenu> wrapper = new LambdaQueryWrapper<>();
-        wrapper.eq(SysRoleMenu::getRoleId,assginMenuVo.getRoleId());
+        wrapper.eq(SysRoleMenu::getRoleId, assginMenuVo.getRoleId());
         sysRoleMenuService.remove(wrapper);
 
         //2 从参数里面获取角色新分配菜单id列表，
         // 进行遍历，把每个id数据添加菜单角色表
         List<Long> menuIdList = assginMenuVo.getMenuIdList();
-        for(Long menuId:menuIdList) {
-            if(StringUtils.isEmpty(menuId)) {
+        for (Long menuId : menuIdList) {
+            if (StringUtils.isEmpty(menuId)) {
                 continue;
             }
             SysRoleMenu sysRoleMenu = new SysRoleMenu();
@@ -155,10 +157,10 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         List<SysMenu> sysMenuList = null;
         //1 判断当前用户是否是管理员   userId=1是管理员
         //1.1 如果是管理员，查询所有菜单列表
-        if(userId.longValue() == 1) {
+        if (userId == 1) {
             //查询所有菜单列表
             LambdaQueryWrapper<SysMenu> wrapper = new LambdaQueryWrapper<>();
-            wrapper.eq(SysMenu::getStatus,1);
+            wrapper.eq(SysMenu::getStatus, 1);
             wrapper.orderByAsc(SysMenu::getSortValue);
             sysMenuList = baseMapper.selectList(wrapper);
         } else {
@@ -179,7 +181,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         //创建list集合，存储最终数据
         List<RouterVo> routers = new ArrayList<>();
         //menus遍历
-        for(SysMenu menu : menus) {
+        for (SysMenu menu : menus) {
             RouterVo router = new RouterVo();
             router.setHidden(false);
             router.setAlwaysShow(false);
@@ -188,12 +190,12 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
             router.setMeta(new MetaVo(menu.getName(), menu.getIcon()));
             //下一层数据部分
             List<SysMenu> children = menu.getChildren();
-            if(menu.getType() == 1) {
+            if (menu.getType() == 1) {
                 //加载出来下面隐藏路由
                 List<SysMenu> hiddenMenuList = children.stream()
                         .filter(item -> !StringUtils.isEmpty(item.getComponent()))
                         .collect(Collectors.toList());
-                for(SysMenu hiddenMenu : hiddenMenuList) {
+                for (SysMenu hiddenMenu : hiddenMenuList) {
                     RouterVo hiddenRouter = new RouterVo();
                     //true 隐藏路由
                     hiddenRouter.setHidden(true);
@@ -206,8 +208,8 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
                 }
 
             } else {
-                if(!CollectionUtils.isEmpty(children)) {
-                    if(children.size() > 0) {
+                if (!CollectionUtils.isEmpty(children)) {
+                    if (children.size() > 0) {
                         router.setAlwaysShow(true);
                     }
                     //递归
@@ -227,7 +229,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
      */
     public String getRouterPath(SysMenu menu) {
         String routerPath = "/" + menu.getPath();
-        if(menu.getParentId().intValue() != 0) {
+        if (menu.getParentId().intValue() != 0) {
             routerPath = menu.getPath();
         }
         return routerPath;
@@ -238,10 +240,10 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
     public List<String> findUserPermsByUserId(Long userId) {
         //1 判断是否是管理员，如果是管理员，查询所有按钮列表
         List<SysMenu> sysMenuList = null;
-        if(userId.longValue() == 1) {
+        if (userId.longValue() == 1) {
             //查询所有菜单列表
             LambdaQueryWrapper<SysMenu> wrapper = new LambdaQueryWrapper<>();
-            wrapper.eq(SysMenu::getStatus,1);
+            wrapper.eq(SysMenu::getStatus, 1);
             sysMenuList = baseMapper.selectList(wrapper);
         } else {
             //2 如果不是管理员，根据userId查询可以操作按钮列表
@@ -250,11 +252,10 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         }
 
         //3 从查询出来的数据里面，获取可以操作按钮值的list集合，返回
-        List<String> permsList = sysMenuList.stream()
-                .filter(item -> item.getType() == 2)
-                .map(item -> item.getPerms())
-                .collect(Collectors.toList());
 
-        return permsList;
+        return sysMenuList.stream()
+                .filter(item -> item.getType() == 2)
+                .map(SysMenu::getPerms)
+                .collect(Collectors.toList());
     }
 }
