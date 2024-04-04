@@ -1,0 +1,8 @@
+### 测试 /user/update：登陆成功
+POST http://127.0.0.1:9081/admin/system/index/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "111111"
+}
